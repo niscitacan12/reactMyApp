@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { Card, Button, Container, Row, Col, CardHeader } from 'react-bootstrap';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
@@ -53,6 +53,9 @@ function TambahData() {
   return (
     <Container>
       <Card className="mb-4" style={{ width: '80%', margin: 'auto' }}>
+        <CardHeader className="bg-primary text-white">
+          Tambah Siswa
+        </CardHeader>
         <Card.Body>
           <>
             <Row className="mb-3">

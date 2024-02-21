@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Button, Row, Col } from 'react-bootstrap';
+import { Card, Button, Row, Col, CardHeader } from 'react-bootstrap';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
@@ -109,6 +109,9 @@ function Edit() {
 
   return (
     <Card className="mb-4" style={{ width: '75%', margin: 'auto' }}>
+      <CardHeader className="bg-primary text-white">
+        Edit Siswa
+      </CardHeader>
     <Card.Body>
       {Object.keys(posts).length > 0 ? (
         <>
