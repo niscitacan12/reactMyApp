@@ -34,6 +34,17 @@
       "img": "https://play-lh.googleusercontent.com/kaIpL2KwDbJIWpzBdFu-GL6i9BXP9GXykALyqetqP1qXUnBQkykFx_eRONXm8Acmz_0=w240-h480-rw"
     },
     {
+      "id": "8772",
+      "namaDepan": "Dwi Azifatul",
+      "namaBelakang": "Jannah",
+      "nis": "0012022003IPA001",
+      "kelas": "10TJKT",
+      "jenisKelamin": "Perempuan",
+      "tanggalLahir": "17072008",
+      "alamat": "Kalitengah Mranggen Demak rt01/01",
+      "img": "https://play-lh.googleusercontent.com/OtXZHqSH1C1wiM9Q4JYADKCPEl7r7fnZC7dfn4fLauO8cRCUdmlw8wkHeFsZOJelelM=w240-h480-rw"
+    },
+    {
       "namaDepan": "Muhammad Lintang",
       "namaBelakang": "Setiawan",
       "nis": "0012022003IPA001",
@@ -41,43 +52,33 @@
       "jenisKelamin": "Laki-Laki",
       "tanggalLahir": "17072008",
       "alamat": "Kalitengah Mranggen Demak rt01/01",
-      "id": "91cf"
+      "id": "91cf",
+      "img": "https://play-lh.googleusercontent.com/NZSaifCcwJnyy8Te4aL48Ar6CmyCboJ_wcgJp113USiIXdtsfY0J-UUNsfBmGKZR1m0=w240-h480-rw"
     },
     {
-      "id": "a7f5",
       "namaDepan": "Muhammad Alfan",
       "namaBelakang": "Bintang Fanansyah",
       "nis": "0012022003IPA001",
-      "kelas": "12JKT",
+      "kelas": "12TKJ",
       "jenisKelamin": "Laki-Laki",
       "tanggalLahir": "17072008",
       "alamat": "Kalitengah Mranggen Demak rt01/01",
-      "img": "https://play-lh.googleusercontent.com/jt-6i1iML0rMtWUS_bpQkR8fBz02N897R4m7M3ex_0RluPchwBaqR1lcJRKbIihdqRk=w240-h480-rw"
+      "id": "a7f5",
+      "img": "https://play-lh.googleusercontent.com/NZSaifCcwJnyy8Te4aL48Ar6CmyCboJ_wcgJp113USiIXdtsfY0J-UUNsfBmGKZR1m0=w240-h480-rw"
     },
     {
-      "id": "1",
-      "namaDepan": "Niscita",
-      "namaBelakang": "Candrarini",
+      "namaDepan": "Mala",
+      "namaBelakang": "Filatunnida",
       "nis": "0012022003IPA001",
-      "kelas": "10TJKT",
+      "kelas": "12TKJ",
       "jenisKelamin": "Perempuan",
       "tanggalLahir": "17072008",
       "alamat": "Kalitengah Mranggen Demak rt01/01",
-      "img": "https://play-lh.googleusercontent.com/_qUtBpMVsGY-CLPx2DreAENHAbr4KHwBGn2w_3jhGSzoRVFRKn0SXUaK0wXSU0SJ7A=w240-h480-rw"
-    },
-    {
       "id": "2",
-      "namaDepan": "Niscita",
-      "namaBelakang": "Candrarini",
-      "nis": "0012022003IPA001",
-      "kelas": "10TJKT",
-      "jenisKelamin": "Perempuan",
-      "tanggalLahir": "17072008",
-      "alamat": "Kalitengah Mranggen Demak rt01/01",
-      "img": "https://play-lh.googleusercontent.com/_qUtBpMVsGY-CLPx2DreAENHAbr4KHwBGn2w_3jhGSzoRVFRKn0SXUaK0wXSU0SJ7A=w240-h480-rw"
+      "img": "https://play-lh.googleusercontent.com/OtXZHqSH1C1wiM9Q4JYADKCPEl7r7fnZC7dfn4fLauO8cRCUdmlw8wkHeFsZOJelelM=w240-h480-rw"
     },
     {
-      "id": "d1f1",
+      "id": "11b3",
       "namaDepan": "Rania",
       "namaBelakang": "Shafa Putri",
       "nis": "0012022003IPA001",
@@ -85,7 +86,40 @@
       "jenisKelamin": "Perempuan",
       "tanggalLahir": "17072008",
       "alamat": "Kalitengah Mranggen Demak rt01/01",
-      "img": "https://pics.craiyon.com/2023-06-20/89f79a8dee744596981e7417b8a7ea1d.webp"
+      "img": "https://play-lh.googleusercontent.com/_qUtBpMVsGY-CLPx2DreAENHAbr4KHwBGn2w_3jhGSzoRVFRKn0SXUaK0wXSU0SJ7A=w240-h480-rw"
+    },
+    {
+      "id": "70a8",
+      "namaDepan": "Faza",
+      "namaBelakang": "Tsania Devi",
+      "nis": "0012022003IPA001",
+      "kelas": "12TKJ",
+      "jenisKelamin": "Perempuan",
+      "tanggalLahir": "17072008",
+      "alamat": "Kalitengah Mranggen Demak rt01/01",
+      "img": "https://play-lh.googleusercontent.com/OtXZHqSH1C1wiM9Q4JYADKCPEl7r7fnZC7dfn4fLauO8cRCUdmlw8wkHeFsZOJelelM=w240-h480-rw"
+    },
+    {
+      "id": "62f3",
+      "namaDepan": "Melyana",
+      "namaBelakang": "Hasya Depratiwi",
+      "nis": "0012022003IPA001",
+      "kelas": "12TKJ",
+      "jenisKelamin": "Perempuan",
+      "tanggalLahir": "17072008",
+      "alamat": "Kalitengah Mranggen Demak rt01/01",
+      "img": "C:\\fakepath\\unnamed.jpg"
+    },
+    {
+      "id": "5b39",
+      "namaDepan": "Yuniah ",
+      "namaBelakang": "Rahma",
+      "nis": "0012022003IPA001",
+      "kelas": "10TJKT",
+      "jenisKelamin": "Perempuan",
+      "tanggalLahir": "17072008",
+      "alamat": "Kalitengah Mranggen Demak rt01/01",
+      "img": "C:\\fakepath\\unnamed.jpg"
     }
   ]
 }

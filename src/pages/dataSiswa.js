@@ -4,6 +4,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash, faInfo, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const DataSiswa = () => {
     const [posts, setPosts] = useState([]);
@@ -32,16 +33,28 @@ const DataSiswa = () => {
         getData();
     }, []);
 
-    const deleteDataSiswa = async (id) => {
-        axios
-          .delete(`http://localhost:3030/dataSiswa/${id}`)
-          .then(() => {
-            window.location.reload();
-          })
-          .catch((error) => {
-            console.error("error deleting:", error);
-          });
-      };
+    const deleteDataSiswa = (id) => {
+        Swal.fire({
+            title: 'Apa kamu yakin?',
+            text: 'Anda tidak akan dapat mengembalikannya!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios
+                    .delete(`http://localhost:3030/dataSiswa/${id}`)
+                    .then(() => {
+                        window.location.reload();
+                    })
+                    .catch((error) => {
+                        console.error("error deleting:", error);
+                    });
+            }
+        });
+    };
     
     // button edit
     const handleEditClick = (id) => {
@@ -61,7 +74,7 @@ const DataSiswa = () => {
 
     return (
         <div className="d-flex justify-content-center align-items-center">
-            <Card style={{ width: '80%', minWidth: '500px' }}>
+            <Card className="mb-4" style={{ width: '100%', margin: '0' }}>
                 <CardHeader className="text-dark mb-2 d-flex flex-column align-items-center bg-primary" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
                 <span className="me-auto">Data Siswa</span>
                 <div className="ms-auto">

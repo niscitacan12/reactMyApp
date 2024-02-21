@@ -46,7 +46,7 @@ function Detail() {
             <>
               <div className="text-center">
                 <img
-                  src={postData.img}
+                  src={process.env.PUBLIC_URL + postData.img}
                   style={{
                     maxWidth: '50%',
                     marginBottom: '15px',

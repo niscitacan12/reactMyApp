@@ -10,14 +10,14 @@ function Dashboard() {
     <div>
       <Row xs={1} md={2} lg={4} className="g-4">
         <Col>
-          <Card className="h-100" style={{ backgroundColor: 'rgb(255, 99, 132)', color: 'white' }}>
+          <Card className="h-100" style={{ backgroundColor: 'rgb(255, 99, 132)', color: 'white', minWidth: '150px' }}>
             <Card.Header>Perempuan</Card.Header>
             <Card.Body>
               <Card.Title>
                 <FontAwesomeIcon icon={faFemale} className="mr-2" />
               </Card.Title>
-              <Card.Text>
-                Jumlah Siswa Perempuan
+              <Card.Text className="d-flex justify-content-between align-items-center">
+                Jumlah Siswa Perempuan <span className="ml-auto" style={{ fontWeight: 'bold', fontSize: '1.5em' }}>8</span>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -29,8 +29,8 @@ function Dashboard() {
               <Card.Title>
                 <FontAwesomeIcon icon={faMale} className="mr-2" /> 
               </Card.Title>
-              <Card.Text>
-                Jumlah Siswa Laki-Laki
+              <Card.Text className="d-flex justify-content-between align-items-center">
+                Jumlah Siswa Laki-Laki <span className="ml-auto" style={{ fontWeight: 'bold', fontSize: '1.5em' }}>4</span>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -42,8 +42,8 @@ function Dashboard() {
               <Card.Title>
                 <FontAwesomeIcon icon={faGraduationCap} className="mr-2" /> 
               </Card.Title>
-              <Card.Text>
-                Jumlah Kelas
+              <Card.Text className="d-flex justify-content-between align-items-center">
+                Jumlah Kelas <span className="ml-auto" style={{ fontWeight: 'bold', fontSize: '1.5em' }}>3</span>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -55,8 +55,8 @@ function Dashboard() {
               <Card.Title>
                 <FontAwesomeIcon icon={faUsers} className="mr-2" /> 
               </Card.Title>
-              <Card.Text>
-                Jumlah Siswa
+              <Card.Text className="d-flex justify-content-between align-items-center">
+                Jumlah Siswa <span className="ml-auto" style={{ fontWeight: 'bold', fontSize: '1.5em' }}>12</span>
               </Card.Text>
             </Card.Body>
           </Card>

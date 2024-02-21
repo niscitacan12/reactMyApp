@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useParams, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faSave } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
 function Edit() {
   const { id_dataSiswa } = useParams();
@@ -19,12 +20,13 @@ function Edit() {
   const [jenisKelamin, setJenisKelamin] = useState("");
   const [tanggalLahir, setTanggalLahir] = useState("");
   const [alamat, setAlamat] = useState("");
+  const [img, setImg] = useState("");
 
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await axios.get(`http://localhost:3030/dataSiswa/${id_dataSiswa}`);
-        const { namaDepan, namaBelakang, nis, kelas, jenisKelamin, tanggalLahir, alamat } = response.data;
+        const { namaDepan, namaBelakang, nis, kelas, jenisKelamin, tanggalLahir, alamat, img } = response.data;
         setPosts(response.data);
         setNamaDepan(namaDepan || '');
         setNamaBelakang(namaBelakang || '');
@@ -33,6 +35,7 @@ function Edit() {
         setJenisKelamin(jenisKelamin || '');
         setTanggalLahir(tanggalLahir || '');
         setAlamat(alamat || '');
+        setImg(img || '');
       } catch (error) {
         console.log(error);
       }
@@ -65,6 +68,9 @@ function Edit() {
       case 'alamat':
         setAlamat(value);
         break;
+      case 'img':
+        setImg(value); 
+        break;
       default:
         break;
     }
@@ -82,6 +88,13 @@ function Edit() {
         jenisKelamin,
         tanggalLahir,
         alamat,
+        img,
+      });
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Sukses!',
+        text: 'Anda berhasil mengedit data siswa.',
       });
   
       history.push('/dataSiswa'); 
@@ -99,6 +112,17 @@ function Edit() {
     <Card.Body>
       {Object.keys(posts).length > 0 ? (
         <>
+          <div className="text-center">
+            <img
+              src={img}
+              style={{
+                maxWidth: '50%',
+                marginBottom: '15px',
+                borderRadius: '50%' 
+              }}
+              alt="Student"
+            />
+          </div>
           <Row className="mb-3">
             <Col md={6}>
               <FloatingLabel controlId="floatingTextarea1" label="Nama Depan">
@@ -167,6 +191,18 @@ function Edit() {
                   value={tanggalLahir}
                   onChange={handleChange}
                   autoComplete="off"
+                />
+              </FloatingLabel>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <FloatingLabel controlId="formFile" label="Gambar" className="mb-3">
+                <Form.Control 
+                  type="file" 
+                  name="img"
+                  utoComplete="off"
+                  onChange={(e) => setImg(e.target.value)}
                 />
               </FloatingLabel>
             </Col>

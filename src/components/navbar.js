@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Navbar, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { LayoutDashboard, Database } from "lucide-react";
 
 import profileImage from '../assets/img/Image.jpeg';
 
 function NavbarComponent() {
+
   return (
     <Navbar expand="lg" className="bg-primary">
       <Navbar.Brand className="d-flex align-items-center">
@@ -29,7 +30,7 @@ function NavbarComponent() {
               Data Siswa
             </Nav.Link>
           </Nav>
-          <Nav>
+          <Nav className="ml-auto">
             <NavDropdown 
               title={
                 <Image src={profileImage} roundedCircle 

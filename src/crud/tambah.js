@@ -6,6 +6,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faSave } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 function TambahData() {
   const [namaDepan, setNamaDepan] = useState("");
@@ -33,7 +34,13 @@ function TambahData() {
         img: img,
       });
 
-      window.location.reload('/dataSiswa');
+      Swal.fire({
+        icon: 'success',
+        title: 'Sukses!',
+        text: 'Anda berhasil menambahkan data siswa.',
+      });
+
+      history.push('/dataSiswa');
     } catch (error) {
       console.log(error);
     }
@@ -120,14 +127,12 @@ function TambahData() {
                 </FloatingLabel>
               </Col>
             </Row>
-            <FloatingLabel controlId="floatingLinkGambar" label="Link Gambar" className="mb-3">
-              <Form.Control
-                as="textarea"
+            <FloatingLabel controlId="formFile" label="Gambar" className="mb-3">
+              <Form.Control 
+                type="file" 
                 name="img"
-                value={img}
-                autoComplete="off"
+                utoComplete="off"
                 onChange={(e) => setImg(e.target.value)}
-                style={{ height: '100px' }}
               />
             </FloatingLabel>
             <FloatingLabel controlId="floatingAlamat" label="Alamat" className="mb-3">

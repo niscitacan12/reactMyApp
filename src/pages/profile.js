@@ -12,8 +12,11 @@ function Profile() {
       <Card.Body>
         <Container>
           <Row className="align-items-center">
+            <h2>Profile Us</h2>
+            <Col xs={6} md={4} className="mx-auto">
+              <Image src={profileImage} thumbnail style={{ width: '300%', height: 'auto' }} />
+            </Col>
             <Col xs={12} md={6} className="mb-3 mb-md-0 mx-auto text-center">
-              <h2>Profile Us</h2>
               <FloatingLabel 
                 controlId="floatingName" 
                 label="Name" 
@@ -59,9 +62,6 @@ function Profile() {
                   style={{ minHeight: '100px' }}
                 />
               </FloatingLabel>
-            </Col>
-            <Col xs={6} md={4} className="mx-auto">
-              <Image src={profileImage} thumbnail style={{ width: '100%', height: 'auto' }} />
             </Col>
           </Row>
         </Container>

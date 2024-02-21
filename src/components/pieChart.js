@@ -18,7 +18,7 @@ export default function PieChart() {
                 labels:["Label 1","Label 2","Label 3","Label 4"],
                 datasets :[
                     {
-                        data: [70, 70, 6, 200],
+                        data: [8, 4, 3, 12],
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
