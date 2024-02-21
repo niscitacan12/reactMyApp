@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
@@ -13,8 +13,8 @@ function Profile() {
         <Container>
           <Row className="align-items-center">
             <h2>Profile Us</h2>
-            <Col xs={6} md={4} className="mx-auto">
-              <Image src={profileImage} thumbnail style={{ width: '300%', height: 'auto' }} />
+            <Col xs={12} md={6} className="text-center mb-3 mb-md-0">
+              <Image src={profileImage} thumbnail style={{ width: '350%', height: 'auto' }} />
             </Col>
             <Col xs={12} md={6} className="mb-3 mb-md-0 mx-auto text-center">
               <FloatingLabel 

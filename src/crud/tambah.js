@@ -22,6 +22,16 @@ function TambahData() {
   const addData = async (e) => {
     e.preventDefault();
 
+    // Validasi input
+    if (!namaDepan || !namaBelakang || !nis || !kelas || !jenisKelamin || !tanggalLahir || !alamat || !img) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: 'Silakan lengkapi semua bidang sebelum menambahkan data siswa.',
+      });
+      return;
+    }
+
     try {
       await axios.post("http://localhost:3030/dataSiswa", {
         namaDepan: namaDepan,

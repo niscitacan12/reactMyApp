@@ -200,18 +200,6 @@ function Edit() {
           </Row>
           <Row className="mb-3">
             <Col>
-              <FloatingLabel controlId="formFile" label="Gambar" className="mb-3">
-                <Form.Control 
-                  type="file" 
-                  name="img"
-                  utoComplete="off"
-                  onChange={(e) => setImg(e.target.value)}
-                />
-              </FloatingLabel>
-            </Col>
-          </Row>
-          <Row className="mb-3">
-            <Col>
               <FloatingLabel controlId="floatingTextarea7" label="Alamat">
                 <Form.Control
                   as="textarea"
