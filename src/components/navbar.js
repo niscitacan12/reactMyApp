@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
-import profileImage from '../assets/img/Image.jpeg';
+import profileImage from '../assets/img/user.jpeg';
 
 function NavbarComponent() {
   const history = useHistory();

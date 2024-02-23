@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardBody, CardHeader, Table, Button, Pagination, PaginationItem } from 'react-bootstrap';
+import { Card, CardBody, CardHeader, Table, Button, Pagination } from 'react-bootstrap';
 import axios from 'axios'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash, faInfo, faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -38,6 +38,8 @@ const DataSiswa = () => {
         const email = localStorage.getItem("email");
         if (!email) {
             history.push('/login');
+        } else {
+            getData(); 
         }
     }, [history]);
 

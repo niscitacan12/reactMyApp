@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLock, faUser, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLock, faUser, faUserCircle, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
@@ -14,27 +14,43 @@ function Register() {
     const [namaDepan, setNamaDepan] = useState("");
     const [namaBelakang, setNamaBelakang] = useState("");
     const [email, setEmail] = useState("");
+    const [NoTelpn, setNoTelpn] = useState("");
+    const [alamat, setAlamat] = useState("");
     const [password, setPassword] = useState("");
     const history = useHistory();
+    const [isPasswordValid, setPasswordValid] = useState(true);
 
     const addData = async (e) => {
         e.preventDefault();
     
         // Validasi input
-        if (!namaDepan || !namaBelakang || !email || !password) {
-          Swal.fire({
-            icon: 'error',
-            title: 'Error!',
-            text: 'Silakan lengkapi semua bidang sebelum registrasi.',
-          });
-          return;
-        }
+        if (password.length < 8) {
+            setPasswordValid(false);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'Password harus memiliki minimal 8 karakter.',
+            });
+            return;
+        } else {
+            setPasswordValid(true);
+        }  
+
+        // password 8 karakter
+        if (password.length < 8) {
+            setPasswordValid(false);
+            return;
+        } else {
+            setPasswordValid(true);
+        }    
     
         try {
           await axios.post("http://localhost:3030/users", {
             namaDepan: namaDepan,
             namaBelakang: namaBelakang,
             email: email,
+            NoTelpn: NoTelpn,
+            alamat: alamat,
             password: password,
           });
     
@@ -109,6 +125,36 @@ function Register() {
                             placeholder="" 
                             autoComplete="off" 
                             onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </InputGroup>
+                </Form.Group>
+
+                <Form.Group className="mb-3 rounded" controlId="formNoTelpn">
+                    <Form.Label>No.Telepon</Form.Label>
+                    <InputGroup>
+                        <InputGroup.Text>
+                            <FontAwesomeIcon icon={faPhone} />
+                        </InputGroup.Text>
+                        <Form.Control 
+                            type="tel" 
+                            placeholder="" 
+                            autoComplete="off" 
+                            onChange={(e) => setNoTelpn(e.target.value)}
+                        />
+                    </InputGroup>
+                </Form.Group>
+
+                <Form.Group className="mb-3 rounded" controlId="formalamat">
+                    <Form.Label>Alamat</Form.Label>
+                    <InputGroup>
+                        <InputGroup.Text>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />
+                        </InputGroup.Text>
+                        <Form.Control 
+                            type="text" 
+                            placeholder="" 
+                            autoComplete="off" 
+                            onChange={(e) => setAlamat(e.target.value)}
                         />
                     </InputGroup>
                 </Form.Group>

@@ -27,7 +27,7 @@ function Login() {
             if (admin && admin.email === email && admin.password === password) {
                 localStorage.setItem("email", admin.email);
                 localStorage.setItem("id", admin.id);
-                history.push("/dataSiswa");
+                history.push("/");
                 setTimeout(() => {
                     window.location.reload();
                 }, 1000);

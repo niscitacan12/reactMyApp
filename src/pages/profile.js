@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
-import profileImage from '../assets/img/Image.jpeg';
+import profileImage from '../assets/img/user.jpeg';
 
 function Profile() {
   return (

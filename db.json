@@ -120,22 +120,28 @@
       "tanggalLahir": "17072008",
       "alamat": "Kalitengah Mranggen Demak rt01/01",
       "img": "C:\\fakepath\\unnamed.jpg"
+    },
+    {
+      "id": "0b40",
+      "namaDepan": "Irvanda ",
+      "namaBelakang": "Ibrahim",
+      "nis": "0012022003IPA001",
+      "kelas": "12TKJ",
+      "jenisKelamin": "Laki-Laki",
+      "tanggalLahir": "17042007",
+      "alamat": "Kalitengah Mranggen Demak rt01/01",
+      "img": "C:\\fakepath\\user.jpeg"
     }
   ],
   "users": [
     {
-      "id": 1,
-      "namaDepan": "niscita",
-      "namaBelakang": "candrarini",
+      "id": "e9a3",
+      "namaDepan": "Niscita",
+      "namaBelakang": "Candrarini",
       "email": "niscita@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "edfd",
-      "namaDepan": "rania shafa",
-      "namaBelakang": "putri",
-      "email": "rania@gmail.com",
-      "password": "12345"
+      "NoTelpn": "089525763194",
+      "alamat": "Kalitengah, kec.Mranggen, kab.Demak, Jawa Tengah",
+      "password": "12345678"
     }
   ]
 }
