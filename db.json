@@ -121,5 +121,21 @@
       "alamat": "Kalitengah Mranggen Demak rt01/01",
       "img": "C:\\fakepath\\unnamed.jpg"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "namaDepan": "niscita",
+      "namaBelakang": "candrarini",
+      "email": "niscita@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "edfd",
+      "namaDepan": "rania shafa",
+      "namaBelakang": "putri",
+      "email": "rania@gmail.com",
+      "password": "12345"
+    }
   ]
 }

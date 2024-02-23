@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
 import { faFemale, faMale } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Dashboard() {
+  const history = useHistory();
+
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+    if (!email) {
+        history.push('/login');
+    }
+  }, [history]);
 
   return (
     <div>

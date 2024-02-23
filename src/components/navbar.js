@@ -1,10 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Navbar, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { LayoutDashboard, Database } from "lucide-react";
+import { useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
 
 import profileImage from '../assets/img/Image.jpeg';
 
 function NavbarComponent() {
+  const history = useHistory();
+
+  const logout = () => {
+    Swal.fire({
+        title: 'Apa anda yakin?',
+        text: 'Anda akan logout!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, log me out!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.clear();
+            window.location.href = "/login";
+        }
+    });
+};
 
   return (
     <Navbar expand="lg" className="bg-primary">
@@ -31,22 +52,29 @@ function NavbarComponent() {
             </Nav.Link>
           </Nav>
           <Nav className="ml-auto">
-            <NavDropdown 
+            <NavDropdown
               title={
-                <Image src={profileImage} roundedCircle 
-                  style={{ 
-                    width: '30px', 
-                    height: '30px', 
-                    objectFit: 'cover' 
-                  }} 
+                <Image src={profileImage} roundedCircle
+                  style={{
+                    width: '30px',
+                    height: '30px',
+                    objectFit: 'cover'
+                  }}
                 />
-              } 
-              id="basic-nav-dropdown" 
-              className="text-white" 
-              align="end" 
+              }
+              id="basic-nav-dropdown"
+              className="text-white"
+              align="end"
             >
-              <NavDropdown.Item disabled>niscita@gmail.com</NavDropdown.Item>
-              <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+              <NavDropdown.Item disabled>
+                niscita@gmail.com
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/profile">
+                Profile
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={logout}>
+                Logout
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

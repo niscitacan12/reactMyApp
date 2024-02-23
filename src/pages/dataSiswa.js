@@ -35,8 +35,11 @@ const DataSiswa = () => {
     };
 
     useEffect(() => {
-        getData();
-    }, []);
+        const email = localStorage.getItem("email");
+        if (!email) {
+            history.push('/login');
+        }
+    }, [history]);
 
     const deleteDataSiswa = (id) => {
         Swal.fire({
@@ -86,7 +89,7 @@ const DataSiswa = () => {
             <div className="d-flex justify-content-end mb-3">
                 <input
                     type="text"
-                    placeholder="Cari siswa..."
+                    placeholder="Cari..."
                     value={searchTerm}
                     onChange={searchHandler}
                     style={{ marginRight: '8px', padding: '4px' }}
