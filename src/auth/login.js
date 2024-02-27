@@ -50,7 +50,7 @@ function Login() {
     };
 
     return (
-        <Card className="mx-auto mt-5" style={{ width: '500px' }}>
+        <Card className="mx-auto mt-5" style={{ width: '100%', maxWidth: '500px' }}>
             <Card.Body>
                 <Card.Title className="text-center">
                     <FontAwesomeIcon

@@ -22,7 +22,7 @@ function Register() {
 
     const addData = async (e) => {
         e.preventDefault();
-    
+
         // Validasi input
         if (password.length < 8) {
             setPasswordValid(false);
@@ -34,35 +34,33 @@ function Register() {
             return;
         } else {
             setPasswordValid(true);
-        }  
+        }
 
-        // password 8 karakter
-        if (password.length < 8) {
-            setPasswordValid(false);
-            return;
-        } else {
-            setPasswordValid(true);
-        }    
-    
         try {
-          await axios.post("http://localhost:3030/users", {
-            namaDepan: namaDepan,
-            namaBelakang: namaBelakang,
-            email: email,
-            NoTelpn: NoTelpn,
-            alamat: alamat,
-            password: password,
-          });
-    
-          Swal.fire({
-            icon: 'success',
-            title: 'Sukses!',
-            text: 'Anda berhasil melakukan registasi.',
-          });
-    
-          history.push('/login');
+            await axios.post("http://localhost:3030/users", {
+                namaDepan: namaDepan,
+                namaBelakang: namaBelakang,
+                email: email,
+                NoTelpn: NoTelpn,
+                alamat: alamat,
+                password: password,
+            });
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Sukses!',
+                text: 'Anda berhasil melakukan registrasi.',
+            });
+
+            history.push('/login');
         } catch (error) {
-          console.log(error);
+            console.log(error);
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'Terjadi kesalahan saat melakukan registrasi.',
+            });
         }
     };
 
@@ -75,7 +73,7 @@ function Register() {
     };
 
   return (
-    <Card className="mx-auto mt-5" style={{ width: '500px' }}>
+    <Card className="mx-auto mt-5" style={{ width: '100%', maxWidth: '500px' }}>
         <Card.Body>
             <Card.Title className="text-center">
                 <FontAwesomeIcon icon={faUserCircle} 

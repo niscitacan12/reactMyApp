@@ -131,6 +131,50 @@
       "tanggalLahir": "17042007",
       "alamat": "Kalitengah Mranggen Demak rt01/01",
       "img": "C:\\fakepath\\user.jpeg"
+    },
+    {
+      "id": "760c",
+      "namaDepan": "Nizar Restu ",
+      "namaBelakang": "Aji",
+      "nis": "202300187IPAS2197",
+      "kelas": "11TJKT",
+      "jenisKelamin": "Laki-Laki",
+      "tanggalLahir": "12022007",
+      "alamat": "Jl. Kemantren Raya No.5, RT.02/RW.04, Wonosari, Kec. Ngaliyan, Kota Semarang, Jawa Tengah",
+      "img": "C:\\fakepath\\user.jpeg"
+    },
+    {
+      "id": "a277",
+      "namaDepan": "Secondta ",
+      "namaBelakang": "Ardiansyah Wicaksono",
+      "nis": "1230976IPAS202332",
+      "kelas": "12TKJ",
+      "jenisKelamin": "Laki-Laki",
+      "tanggalLahir": "13072006",
+      "alamat": "Jl. Kemantren Raya No.5, RT.02/RW.04, Wonosari, Kec. Ngaliyan, Kota Semarang, Jawa Tengah",
+      "img": "C:\\fakepath\\user.jpeg"
+    },
+    {
+      "id": "8204",
+      "namaDepan": "Khoirul ",
+      "namaBelakang": "Nisa",
+      "nis": "1230976IPAS202332",
+      "kelas": "12TKJ",
+      "jenisKelamin": "Parempuan",
+      "tanggalLahir": "01062006",
+      "alamat": "Jl. Kemantren Raya No.5, RT.02/RW.04, Wonosari, Kec. Ngaliyan, Kota Semarang, Jawa Tengah",
+      "img": "C:\\fakepath\\Image.jpeg"
+    },
+    {
+      "id": "f93c",
+      "namaDepan": "Dzakiya ",
+      "namaBelakang": "Alfyatun Nufus",
+      "nis": "1230976IPAS202332",
+      "kelas": "10TJKT",
+      "jenisKelamin": "Perempuan",
+      "tanggalLahir": "17072008",
+      "alamat": "Jl. Kemantren Raya No.5, RT.02/RW.04, Wonosari, Kec. Ngaliyan, Kota Semarang, Jawa Tengah",
+      "img": "C:\\fakepath\\c4fa5fcfd9022c829ffce798a72a89fb.jpg"
     }
   ],
   "users": [
@@ -141,6 +185,15 @@
       "email": "niscita@gmail.com",
       "NoTelpn": "089525763194",
       "alamat": "Kalitengah, kec.Mranggen, kab.Demak, Jawa Tengah",
+      "password": "12345678"
+    },
+    {
+      "id": "4955",
+      "namaDepan": "Rania Shafa",
+      "namaBelakang": "Putri",
+      "email": "rania@gmail.com",
+      "NoTelpn": "089525763194",
+      "alamat": " Teluk Kec. Karangawen, Kabupaten Demak, Jawa Tengah",
       "password": "12345678"
     }
   ]

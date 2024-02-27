@@ -14,6 +14,7 @@ import Edit from './crud/edit';
 import Profile from './pages/profile';
 import Login from './auth/login';
 import Register from './auth/register';
+import Api from './pages/api';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/detail_siswa/:id_dataSiswa" component={Detail} exact />
             <Route path="/tambah_siswa" component={Tambah} exact />
             <Route path="/edit_siswa/:id_dataSiswa" component={Edit} exact />
+            <Route path="/api" component={Api} exact />
             <Route path="/Profile" component={Profile} exact />
             <Route path="/login" component={Login} exact />
             <Route path="/register" component={Register} exact />

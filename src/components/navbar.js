@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Navbar, Nav, NavDropdown, Image } from 'react-bootstrap';
-import { LayoutDashboard, Database } from "lucide-react";
+import { LayoutDashboard, Database, Notebook } from "lucide-react";
 import { useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -49,6 +49,10 @@ function NavbarComponent() {
             <Nav.Link href="/dataSiswa" className="d-flex align-items-center text-white">
               <Database size={20} className="me-1" />
               Data Siswa
+            </Nav.Link>
+            <Nav.Link href="/api" className="d-flex align-items-center text-white">
+              <Notebook size={20} className="me-1" />
+              Api Table
             </Nav.Link>
           </Nav>
           <Nav className="ml-auto">
